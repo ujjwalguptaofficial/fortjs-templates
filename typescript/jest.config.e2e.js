@@ -11,5 +11,7 @@ module.exports = {
     "testPathIgnorePatterns": [
         "<rootDir>/(build|bin|dist|node_modules)/"
     ],
-    moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' })
+    moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
+    globalSetup: "<rootDir>/tests/e2e.setup.js",
+    globalTeardown: "<rootDir>/tests/e2e.teardown.js"
 };

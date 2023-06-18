@@ -20,8 +20,5 @@ describe('DefaultController', () => {
 
     afterAll(async () => {
         await Fort.destroy();
-        await new Promise((res) => {
-            setTimeout(res, 2000);
-        });
     });
 });

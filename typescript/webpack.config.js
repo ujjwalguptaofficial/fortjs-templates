@@ -41,7 +41,9 @@ module.exports = {
     output: {
         filename: 'app.js',
         path: path.resolve(__dirname, process.env.BUILD_FOLDER || 'dist'),
-        pathinfo: true
+        pathinfo: true,
+        library: undefined,
+        libraryTarget: "commonjs2"
     },
     plugins: [new nodemonPlugin()],
     externals: [nodeExternals()]

@@ -3,10 +3,10 @@ import { viewResult, Fort } from "fortjs";
 import { createApp } from "@/index";
 
 describe('DefaultController', () => {
-    let controller: DefaultController;
+    const controller: DefaultController = new DefaultController();
+
     beforeAll(async () => {
         await createApp();
-        controller = new DefaultController();
     });
 
     it('index', async () => {
