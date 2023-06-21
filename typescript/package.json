@@ -9,6 +9,7 @@
     "lint": "tslint **/*.ts --exclude node_modules/",
     "build": "npm run webpack",
     "start": "cross-env NODE_ENV=development npm run webpack:watch",
+    "dev": "npm run start",
     "deploy": "cross-env NODE_ENV=production npm run build",
     "test:unit": "cross-env NODE_ENV=test jest --config jest.config.spec.js --runInBand",
     "test:e2e": "npm run build && cross-env NODE_ENV=test jest --config jest.config.e2e.js --runInBand",

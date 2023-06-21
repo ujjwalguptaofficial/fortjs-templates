@@ -1,6 +1,6 @@
 import * as path from "path";
 import { Fort } from "fortjs";
-import { routes } from "./routes";
+import { routes } from "@/routes";
 
 export const createApp = async () => {
     Fort.folders = [{
@@ -10,7 +10,7 @@ export const createApp = async () => {
     Fort.routes = routes;
 
     process.env.APP_URL = `http://localhost:${Fort.port}`;
-    
+
     await Fort.create();
 };
 

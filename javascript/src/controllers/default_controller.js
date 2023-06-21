@@ -1,8 +1,9 @@
-import { Controller, defaultWorker, textResult, viewResult, assign } from "fortjs";
+import { Controller, worker, viewResult, assign, route } from "fortjs";
 
 export class DefaultController extends Controller {
 
-    @defaultWorker()
+    @worker()
+    @route("/")
     async index(@assign('FortJs') title) {
 
         const data = {
