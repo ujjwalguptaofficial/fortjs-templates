@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/ujjwalguptaofficial/fortjs-typescript-starter#readme",
   "dependencies": {
-    "fortjs": "^2.2.5"
+    "fortjs": "^2.4.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
