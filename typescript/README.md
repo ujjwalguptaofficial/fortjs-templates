@@ -1,4 +1,4 @@
-# fortjs-javascript
+# fortjs-typescript
 Typescript fortjs project
 
 # How to use
