@@ -1,7 +1,5 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
-const nodemonPlugin = require('nodemon-webpack-plugin');
-
 const rootFolder = path.join(__dirname);
 
 module.exports = {
@@ -45,6 +43,6 @@ module.exports = {
         library: undefined,
         libraryTarget: "commonjs2"
     },
-    plugins: [new nodemonPlugin()],
+    plugins: [],
     externals: [nodeExternals()]
 };

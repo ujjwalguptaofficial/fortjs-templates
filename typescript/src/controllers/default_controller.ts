@@ -1,4 +1,4 @@
-import { Controller, viewResult, assign, http } from "fortjs";
+import { Controller, viewResult, assign, http, Fort } from "fortjs";
 
 export class DefaultController extends Controller {
 
@@ -7,7 +7,8 @@ export class DefaultController extends Controller {
         const data = {
             title: title
         };
-        const result = await viewResult('../src/views/default/index.html', data);
+
+        const result = await viewResult('src/views/default/index.html', data);
         return result;
     }
 }
