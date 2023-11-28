@@ -1,4 +1,5 @@
 const path = require('path');
+const { webpack, BannerPlugin } = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const rootFolder = path.join(__dirname);
 
@@ -43,6 +44,17 @@ module.exports = {
         library: undefined,
         libraryTarget: "commonjs2"
     },
-    plugins: [],
+    plugins: [
+        ...(
+            process.env.NODE_ENV === "production" ? [
+                new BannerPlugin({
+                    banner: (() => {
+                        const package = require("./package.json");
+                        return `App version : ${package.version}, createdAt - ${new Date().toDateString()}`
+                    })()
+                })
+            ] : []
+        )
+    ],
     externals: [nodeExternals()]
 };
