@@ -8,7 +8,7 @@ export class DefaultController extends Controller {
         const data = {
             title: title
         }
-        const result = await viewResult('../src/views/default/index.html', data);
+        const result = await viewResult('src/views/default/index.html', data);
         return result;
 
     }
