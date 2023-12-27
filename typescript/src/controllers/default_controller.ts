@@ -1,4 +1,4 @@
-import { Controller, viewResult, assign, http, Fort } from "fortjs";
+import { Controller, viewResult, assign, http } from "fortjs";
 
 export class DefaultController extends Controller {
 
