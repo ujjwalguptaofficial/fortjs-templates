@@ -10,6 +10,8 @@
     "build": "npm run webpack",
     "start": "cross-env NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec 'ts-node' -r tsconfig-paths/register ./src/index.ts",
     "dev": "npm run start",
+    "start:prod": "NODE_OPTIONS=--enable-source-maps cross-env NODE_ENV=production node ./dist/app.js",
+    "prod": "npm run start:prod",
     "deploy": "cross-env NODE_ENV=production npm run build",
     "test:unit": "cross-env NODE_ENV=test jest --config jest.config.spec.js --runInBand",
     "test:e2e": "npm run build && cross-env NODE_ENV=test jest --config jest.config.e2e.js --runInBand",
